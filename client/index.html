@@ -11,24 +11,36 @@
 
     <title>Book Rental</title>
   </head>
+
+  <!-- call api on load -->
   <body onload="handleOnLoad()">
 
+    <!-- import scripts -->
     <script src="./resources/script/api.js"></script>
     <script src="./resources/script/index.js"></script>
 
+    <!-- banner -->
     <div class="jumbotron">
         <h1>Book Rental System</h1>
     </div>
 
+    <!-- container -->
     <div class="container">
+
+        <!-- row -->
         <div class="row">
+
+            <!-- available books column -->
             <div class="col-md-3">
                 <h3>Available Books</h3>
                 <div id="listBox"></div>
             </div>
+
+            <!-- book information column -->
             <div class="col-md-6">
                 <h3 class="intputHeader">Book Information</h3>
 
+                <!-- book data -->
                 <form onsubmit="return false;" method="post">
                     <label for="bookTitle">Title:</label>
                     <input type="text" id="bookTitle" name="title" readOnly><br><br>
@@ -51,6 +63,8 @@
                     <label for="bookCover">Cover URL:</label>
                     <input type="text" id="bookCover" name="cover" readOnly><br><br>
                 </form>
+
+                <!-- buttons -->
                 <div class="btnRow">
                     <button id="newButton" class="btn btn-primary" onclick="handleNewClick()">New</button>
                     <button id="editButton" class="btn btn-primary" onclick="handleEditClick()">Edit</button>
@@ -62,6 +76,8 @@
                 </div>
                 
             </div>
+
+            <!-- image column -->
             <div class="col-md-3">
                 <h3>Cover Art</h3>
                 <div id="picBox"></div>
